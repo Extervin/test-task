@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Casino Brands</title>
+    <title>Casino Brands Central - Definitely Not Gambling</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Top Casino Brands</h1>
-            <div class="country-info">
-                <span id="countryDisplay">Loading...</span>
+    <div class="background-animation"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-dice logo-icon"></i>
+                <span class="logo-text">Casino Central</span>
             </div>
-        </header>
-
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Loading casinos...</p>
+            <div class="nav-links">
+                <span class="nav-item">Home</span>
+                <span class="nav-item">About</span>
+            </div>
         </div>
-
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1 class="hero-title">
+                Top Casino Brands
+                <span class="title-subtitle">*Totally Legitimate Business Rankings*</span>
+            </h1>
+            <div class="country-info">
+                <span id="countryDisplay">Detecting your location...</span>
+            </div>
+          </div>
+        <div class="stats-bar">
+            <div class="stat-item">
+                <i class="fas fa-building"></i>
+                <span class="stat-number" id="totalCasinos">0</span>
+                <span class="stat-label">Totally Real Casinos</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-thumbs-up"></i>
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Satisfaction Rate*</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span class="stat-number">252</span>
+                <span class="stat-label">Minutes of Development</span>
+            </div>
+        </div>
+        <div class="loading fancy-loading" id="loading">
+            <div class="loading-animation">
+                <i class="fas fa-dice-one dice"></i>
+                <i class="fas fa-dice-two dice"></i>
+            </div>
+            <p>Rolling the dice for your entertainment...</p>
+        </div>
         <div class="error" id="error" style="display: none;">
-            <p>Failed to load casinos. Please try again.</p>
-            <button onclick="loadBrands()" class="retry-btn">Retry</button>
+            <i class="fas fa-exclamation-triangle error-icon"></i>
+            <p>Oops! Our hamster fell off the wheel.</p>
+            <small>Technical translation: Failed to load casinos</small>
+            <br>
+            <button onclick="loadBrands()" class="retry-btn">
+                <i class="fas fa-redo"></i>
+                Restart Hamster
+            </button>
         </div>
-
         <div class="brands-list" id="brandsList">
         </div>
+        <div class="disclaimer-section">
+            <h3>Cool Thing That Nobody Reads</h3>
+            <p>* Rating based on survey of 1 person</p>
+            <p>** Those are test casinos</p>
+            <p>*** (суперстрахотен текст за SEO оптимизация)</p>
+        </div>
     </div>
-
+    <footer class="footer">
+        <p class="footer-text">No developers were harmed in the making of this website*</p>
+        <small>*Slight caffeine overdose incidents are not counted</small>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
