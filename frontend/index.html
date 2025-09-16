@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Casino Brands</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Top Casino Brands</h1>
+            <div class="country-info">
+                <span id="countryDisplay">Loading...</span>
+            </div>
+        </header>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading casinos...</p>
+        </div>
+
+        <div class="error" id="error" style="display: none;">
+            <p>Failed to load casinos. Please try again.</p>
+            <button onclick="loadBrands()" class="retry-btn">Retry</button>
+        </div>
+
+        <div class="brands-list" id="brandsList">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
