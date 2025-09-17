@@ -13,6 +13,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY backend/ .
 RUN composer install --no-dev --optimize-autoloader
+RUN cp .env.example .env
 RUN touch database/database.sqlite && chmod 664 database/database.sqlite
 RUN php artisan key:generate --force && php artisan migrate --force && php artisan db:seed --force
 EXPOSE 8000
